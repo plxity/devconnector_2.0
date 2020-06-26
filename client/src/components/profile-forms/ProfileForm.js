@@ -78,30 +78,30 @@ const ProfileForm = ({
       <form className="form" onSubmit={onSubmit}>
         <div className="form-group">
           <select name="status" value={status} onChange={onChange}>
-            <option>* Select Professional Status</option>
-            <option value="Developer">Developer</option>
-            <option value="Junior Developer">Junior Developer</option>
-            <option value="Senior Developer">Senior Developer</option>
-            <option value="Manager">Manager</option>
-            <option value="Student or Learning">Student or Learning</option>
-            <option value="Instructor">Instructor or Teacher</option>
-            <option value="Intern">Intern</option>
+            <option>* Select Your Pet</option>
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+            <option value="Bird">Bird</option>
+            <option value="Fish">Fish</option>
+            <option value="Rabbit">Rabbit</option>
+            <option value="Iguana">Iguana</option>
+            {/* <option value="Intern"></option> */}
             <option value="Other">Other</option>
           </select>
           <small className="form-text">
-            Give us an idea of where you are at in your career
+            Tell us about your Pet
           </small>
         </div>
         <div className="form-group">
           <input
             type="text"
-            placeholder="Company"
+            placeholder="Breed"
             name="company"
             value={company}
             onChange={onChange}
           />
           <small className="form-text">
-            Could be your own company or one you work for
+            Your pet breed
           </small>
         </div>
         <div className="form-group">
@@ -113,7 +113,7 @@ const ProfileForm = ({
             onChange={onChange}
           />
           <small className="form-text">
-            Could be your own or a company website
+            Could be your own or related to your pet
           </small>
         </div>
         <div className="form-group">
@@ -131,16 +131,16 @@ const ProfileForm = ({
         <div className="form-group">
           <input
             type="text"
-            placeholder="* Skills"
+            placeholder="* Vaccines given to your pet"
             name="skills"
             value={skills}
             onChange={onChange}
           />
           <small className="form-text">
-            Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
+            Please use comma separated values (eg. Canine influenza, Leptospirosis, Bordetella bronchiseptica )
           </small>
         </div>
-        <div className="form-group">
+        {/* <div className="form-group">
           <input
             type="text"
             placeholder="Github Username"
@@ -152,15 +152,15 @@ const ProfileForm = ({
             If you want your latest repos and a Github link, include your
             username
           </small>
-        </div>
+        </div> */}
         <div className="form-group">
           <textarea
-            placeholder="A short bio of yourself"
+            placeholder="A short bio of your pet"
             name="bio"
             value={bio}
             onChange={onChange}
           />
-          <small className="form-text">Tell us a little about yourself</small>
+          <small className="form-text">Tell us a little about pet</small>
         </div>
 
         <div className="my-2">
@@ -209,7 +209,7 @@ const ProfileForm = ({
               />
             </div>
 
-            <div className="form-group social-input">
+            {/* <div className="form-group social-input">
               <i className="fab fa-linkedin fa-2x" />
               <input
                 type="text"
@@ -218,7 +218,7 @@ const ProfileForm = ({
                 value={linkedin}
                 onChange={onChange}
               />
-            </div>
+            </div> */}
 
             <div className="form-group social-input">
               <i className="fab fa-instagram fa-2x" />

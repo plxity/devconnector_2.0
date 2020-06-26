@@ -25,20 +25,19 @@ const AddEducation = ({ addEducation, history }) => {
     current
   } = formData;
 
-  const onChange = e =>
+  const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Add Your Education</h1>
+      <h1 className="large text-primary">Add Previous Pet Details</h1>
       <p className="lead">
-        <i className="fas fa-code-branch" /> Add any school or bootcamp that you
-        have attended
+        <i className="fas fa-dog" /> Previous Experiences With Pets
       </p>
       <small>* = required field</small>
       <form
         className="form"
-        onSubmit={e => {
+        onSubmit={(e) => {
           e.preventDefault();
           addEducation(formData, history);
         }}
@@ -46,7 +45,7 @@ const AddEducation = ({ addEducation, history }) => {
         <div className="form-group">
           <input
             type="text"
-            placeholder="* School or Bootcamp"
+            placeholder="*Pet Type"
             name="school"
             value={school}
             onChange={onChange}
@@ -56,7 +55,7 @@ const AddEducation = ({ addEducation, history }) => {
         <div className="form-group">
           <input
             type="text"
-            placeholder="* Degree or Certificate"
+            placeholder="*Breed Name"
             name="degree"
             value={degree}
             onChange={onChange}
@@ -66,7 +65,7 @@ const AddEducation = ({ addEducation, history }) => {
         <div className="form-group">
           <input
             type="text"
-            placeholder="Field of Study"
+            placeholder="*Place"
             name="fieldofstudy"
             value={fieldofstudy}
             onChange={onChange}
@@ -87,7 +86,7 @@ const AddEducation = ({ addEducation, history }) => {
                 setFormData({ ...formData, current: !formData.current })
               }
             />{' '}
-            Current School
+            Currently have
           </p>
         </div>
         <div className="form-group">
@@ -105,7 +104,7 @@ const AddEducation = ({ addEducation, history }) => {
             name="description"
             cols="30"
             rows="5"
-            placeholder="Program Description"
+            placeholder="Describe Your Experience"
             value={description}
             onChange={onChange}
           />

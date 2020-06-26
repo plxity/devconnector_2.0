@@ -22,10 +22,9 @@ const AddExperience = ({ addExperience, history }) => {
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Add An Experience</h1>
+      <h1 className="large text-primary">Add Vaccine Details</h1>
       <p className="lead">
-        <i className="fas fa-code-branch" /> Add any developer/programming
-        positions that you have had in the past
+        <i className="fas fa-clinic-medical" /> Keep your pets vaccine details updated!
       </p>
       <small>* = required field</small>
       <form
@@ -35,20 +34,10 @@ const AddExperience = ({ addExperience, history }) => {
           addExperience(formData, history);
         }}
       >
-        <div className="form-group">
+         <div className="form-group">
           <input
             type="text"
-            placeholder="* Job Title"
-            name="title"
-            value={title}
-            onChange={onChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <input
-            type="text"
-            placeholder="* Company"
+            placeholder="*Vaccine"
             name="company"
             value={company}
             onChange={onChange}
@@ -58,12 +47,23 @@ const AddExperience = ({ addExperience, history }) => {
         <div className="form-group">
           <input
             type="text"
+            placeholder="*Place"
+            name="title"
+            value={title}
+            onChange={onChange}
+            required
+          />
+        </div>
+       
+        {/* <div className="form-group">
+          <input
+            type="text"
             placeholder="Location"
             name="location"
             value={location}
             onChange={onChange}
           />
-        </div>
+        </div> */}
         <div className="form-group">
           <h4>From Date</h4>
           <input type="date" name="from" value={from} onChange={onChange} />
@@ -79,7 +79,7 @@ const AddExperience = ({ addExperience, history }) => {
                 setFormData({ ...formData, current: !current });
               }}
             />{' '}
-            Current Job
+            Valid Now
           </p>
         </div>
         <div className="form-group">
@@ -97,7 +97,7 @@ const AddExperience = ({ addExperience, history }) => {
             name="description"
             cols="30"
             rows="5"
-            placeholder="Job Description"
+            placeholder="Vaccine Description"
             value={description}
             onChange={onChange}
           />

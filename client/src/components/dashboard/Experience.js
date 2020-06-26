@@ -6,10 +6,10 @@ import { connect } from 'react-redux';
 import { deleteExperience } from '../../actions/profile';
 
 const Experience = ({ experience, deleteExperience }) => {
-  const experiences = experience.map(exp => (
+  const experiences = experience.map((exp) => (
     <tr key={exp._id}>
       <td>{exp.company}</td>
-      <td className="hide-sm">{exp.title}</td>
+      <td>{exp.title}</td>
       <td>
         <Moment format="YYYY/MM/DD">{moment.utc(exp.from)}</Moment> -{' '}
         {exp.to === null ? (
@@ -18,27 +18,26 @@ const Experience = ({ experience, deleteExperience }) => {
           <Moment format="YYYY/MM/DD">{moment.utc(exp.to)}</Moment>
         )}
       </td>
-      <td>
+      {/* <td>
         <button
           onClick={() => deleteExperience(exp._id)}
           className="btn btn-danger"
         >
           Delete
         </button>
-      </td>
+      </td> */}
     </tr>
   ));
 
   return (
     <Fragment>
-      <h2 className="my-2">Experience Credentials</h2>
+      <h2 className="my-2">Vaccine Details</h2>
       <table className="table">
         <thead>
           <tr>
-            <th>Company</th>
-            <th className="hide-sm">Title</th>
-            <th className="hide-sm">Years</th>
-            <th />
+            <th>Name</th>
+            <th>Place</th>
+            <th>Years</th>
           </tr>
         </thead>
         <tbody>{experiences}</tbody>
@@ -52,7 +51,4 @@ Experience.propTypes = {
   deleteExperience: PropTypes.func.isRequired
 };
 
-export default connect(
-  null,
-  { deleteExperience }
-)(Experience);
+export default connect(null, { deleteExperience })(Experience);
